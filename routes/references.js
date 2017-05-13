@@ -36,7 +36,8 @@ router.get('/', (req, res, next) => {
             tank = {
               name_i18n: 'NaN (removed)',
               level: 'NaN',
-              nation: 'NaN'
+              nation: 'NaN',
+              image: ''
             };
           }
 
@@ -58,7 +59,8 @@ router.get('/', (req, res, next) => {
             deltaWinRate: roundTwoDecPlaces(obj.expWinRate - old.expWinRate),
             tier: tank.level,
             nation: tank.nation,
-            class: tank.type ? tank.type.replace('Tank', '') : 'NaN'
+            class: tank.type ? tank.type.replace('Tank', '') : 'NaN',
+            img: tank.image
           };
         });
 
